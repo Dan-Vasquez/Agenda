@@ -1,0 +1,58 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Actividades Pendientes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-sun"></i>
+    </div>
+    <div class="container">
+        <div class="input-area">
+            <input type="text" id="activityInput" placeholder="Añade una actividad...">
+            <input type="date" id="activityDate">
+            <button id="addButton"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="activity-summary">
+            <div class="summary-card pending">
+                <div class="summary-icon"><i class="fas fa-hourglass-half"></i></div>
+                <div class="summary-count" id="pendingCount">0</div>
+                <div class="summary-label">Pendientes</div>
+            </div>
+            <div class="summary-card completed">
+                <div class="summary-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="summary-count" id="completedCount">0</div>
+                <div class="summary-label">Completadas</div>
+            </div>
+        </div>
+        <div class="sort-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="sortByDate"><i class="fas fa-calendar-alt"></i> Fecha</th>
+                        <th id="sortByStatus"><i class="fas fa-tasks"></i> Estado</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <ul id="activitiesList">
+        </ul>
+        
+        <div class="archived-section">
+            <h2><i class="fas fa-archive"></i> Actividades Completadas</h2>
+            <div class="archived-toggle" id="toggleArchived">
+                <i class="fas fa-chevron-down"></i> Mostrar/Ocultar
+            </div>
+            <ul id="archivedList" class="hidden">
+            </ul>
+        </div>
+      <div class="floating-action-btn" id="mobileAddBtn">
+      <i class="fas fa-plus"></i>
+</div>
+    </div>
+</body>
+</html>
